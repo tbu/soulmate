@@ -12,7 +12,7 @@ module Soulmate
     end
 
     def normalize(str)
-      str.downcase.gsub(/[^a-z0-9äöüß ]/i, '').strip
+      str.mb_chars.downcase.to_s.gsub(/[^a-z0-9äöüß ]/i, '').strip
     end
 
   end
